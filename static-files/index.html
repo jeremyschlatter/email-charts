@@ -1,0 +1,449 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--[if IE 7 ]>    <html class= "ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class= "ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class= "ie9"> <![endif]-->
+
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+
+<head>
+
+<!--Page Title-->
+<title>EmailCharts</title>
+<!--Meta Tags-->
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- Set Viewport-->
+<meta name="viewport" content="user-scalable=no,initial-scale=1.0, maximum-scale=1.0 width=device-width" />
+<!-- Allows WebApp-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!--Main CSS-->
+<link rel="stylesheet" href="css/main.css" media="screen">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.elastislide.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script type="text/javascript"> function DoAuthInit() { gapi.auth.init(); } </script>
+<script src="https://apis.google.com/js/client.js?onload=DoAuthInit"></script>
+<script src="js/custom.js"></script>
+<script src="js/emailcharts.js"></script>
+<script src="js/authorize.js"></script>
+<script src="js/jquery.preloadcssimages.js"></script>
+
+<script type="text/javascript">
+function validateForm()
+{
+var x=document.forms["contact_form"]["fname"].value;
+if (x==null || x=="" || x=="First Name")
+  {
+  alert("Please enter your first name");
+  return false;
+  }
+var x=document.forms["contact_form"]["lname"].value;
+if (x==null || x=="" || x=="Last Name")
+  {
+  alert("Please enter your last name");
+  return false;
+  }
+var x=document.forms["contact_form"]["email"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Please supply a valid e-mail address");
+  return false;
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- Start header top -->
+<header id="top">
+
+<!-- Start of top logo -->
+<div id="top_logo">
+<a href="/"><img src="img/logo.jpg" alt="top logo" /></a>
+
+</div><!-- End of top logo -->
+
+<!-- Start of top cta -->
+<div id="top_cta">
+
+<!-- Start of pinterest -->
+
+<div id="pinterest">
+
+<a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://emailcharts.com/home?status=EmailCharts - Visualize Your Email&amp;media=&media=img/logo.png" title="Pin This!" rel="nofollow" target="_blank" alt="Pinterest"></a>
+</div><!-- End of pinterest -->
+
+<!-- Start of twitter -->
+<div id="twitter">
+<a target="_blank" href="http://twitter.com/home?status=http://www.emailcharts.com/"></a>
+
+</div><!-- End of twitter -->
+
+<!-- Start of linkedin -->
+<div id="linkedin">
+<a target="_blank" href="	http://www.linkedin.com/shareArticle?mini=true&url=http://www.emailcharts.com/&title=Visualize Your Email With EmailCharts&summary=Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal your email sending patterns. At the end of the day, we have one simple goal: to help you understand how you work, so that you can improve how you live."></a>
+
+</div><!-- End of linkedin -->
+
+<!-- Start of google -->
+<div id="google">
+<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php www.emailcharts.com;?>"></a>	
+
+</div><!-- End of google -->
+
+<!-- Start of facebook -->
+<div id="facebook">
+<a target="_blank" href="	http://www.facebook.com/sharer.php?u=http://www.emailcharts.com/&t=Email Charts - Visualize Your Email"></a>
+
+</div><!-- End of facebook -->
+
+</div><!-- End of top cta -->
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</header><!-- End of header top -->
+
+<!-- Start of full width border -->
+<div class="full_width_border">
+
+</div><!-- End of full width border -->
+
+<!-- Start of main content wrapper -->
+<div id="main_content_wrapper">
+
+<div id="ctawrapper">
+
+<!-- Start of cta text -->
+<section id="cta_text">
+<h1>Face it - you can't resist beautiful data. <br><br><span class="blue">We make your email data beautiful.</span></h1> 
+
+<!-- Start of button group -->
+<section class="button_group">
+
+<!-- Start of black button -->
+<div class="black_button">
+
+<!-- Start of left bracket -->
+<div class="left_bracket">
+
+</div><!-- End of left bracket -->
+
+<a href="#learnmore1">Learn More</a>
+
+</div><!-- End of black button -->
+
+<!-- Start of hex -->
+<div class="hex">
+<img src="img/or.png" width="31" height="38" alt="or" />
+
+</div><!-- End of hex -->
+
+<!-- Start of green button right -->
+<div class="green_button_right">
+
+<a href="#" onClick="doIt(); return false">Try It Now</a>
+
+<!-- Start of right bracket -->
+<div class="right_bracket">
+
+</div><!-- End of right bracket -->
+
+</div><!-- End of green button right -->
+
+<!-- Start of light -->
+<div class="light">
+
+</div><!-- End of light -->
+
+</section><!-- End of button group -->
+
+</section><!-- End of cta text -->
+
+<!-- Start of cta image -->
+<aside id="cta_image">
+<a href="#" target="_blank"><img src="img/iphone.png" alt="product image" height="575"/></a>
+
+</aside><!-- Start of cta image -->
+
+</div>
+
+
+<!-- Start of main cta -->
+<section class="main_cta" style="padding-bottom:0px">
+
+<a name="learnmore1"></a><h2 style="padding-bottom:0px">EmailCharts helps you understand your email behavior.</h2>
+
+<!-- Start of triangle hr -->
+<div class="triangle_hr">
+
+<!-- Start of triangle hr img -->
+<div class="triangle_hr_img">
+<img src="img/hrbreaker.png" height="13" width="16" alt="triangle" />
+
+</div><!-- End of triangle hr img -->
+
+</div><!-- End of triangle hr -->
+
+<!-- Start of one third first -->
+<article class="one_third_first">
+
+<!-- Start of benefit one -->
+<div class="benefit_one">
+<h6>Save time and energy by fixing your schedule.</h6>
+
+<p>EmailCharts shows you how you spend your time - which is the first step towards saving more of it. You may not realize how often you send emails late at night or during your lunch hour.</p>
+
+</div><!-- End of benefit one -->
+
+</article><!-- End of one third first -->
+
+
+<!-- Start of one third -->
+<article class="one_third">
+
+<!-- Start of benefit three -->
+<div class="benefit_three">
+<h6>Understanding your email can be easy.</h6>
+
+<p>With EmailCharts, you don't have to be a data visualization wizard. Our easy-to-use online dashboard helps you monitor and understand your email habits without installing any messy software.</p>
+
+</div><!-- End of benefit three -->
+
+</article><!-- End of one third -->
+
+<!-- Start of one third -->
+<article class="one_third">
+
+<!-- Start of benefit two -->
+<div class="benefit_two">
+<h6>Complete privacy and security.</h6>
+
+<p>We use your data to build you beautiful visualizations - and nothing else. We won't sell your data, read your email, or do anything sneaky or confusing. We're committed to total privacy and security.</p>
+
+</div><!-- End of benefit two -->
+
+</article><!-- End of one third -->
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</section><!-- End of main cta -->
+
+<!-- Start of call to action -->
+<div class="call_to_action">
+
+<!-- Start of button group2 -->
+<section class="button_group2">
+
+<!-- Start of black button -->
+
+<div class="black_button">
+
+<!-- Start of left bracket -->
+<div class="left_bracket">
+
+</div><!-- End of left bracket -->
+
+<a href="#learnmore2">Learn More</a>
+
+</div><!-- End of black button -->
+
+<!-- Start of hex -->
+<div class="hex">
+<img src="img/or.png" width="31" height="38" alt="or" />
+
+</div><!-- End of hex -->
+
+<!-- Start of green button right -->
+<div class="green_button_right">
+
+<a href="#" onClick="doIt(); return false">Try It Now</a>
+
+<!-- Start of right bracket -->
+<div class="right_bracket">
+
+</div><!-- End of right bracket -->
+
+</div><!-- End of green button right -->
+
+</section><!-- End of button group2 -->
+
+</div><!-- End of call to action -->
+
+
+<!-- Start of middle earth -->
+<section class="middle_earth">
+	<div class="one_half_first">
+	<a name="learnmore2"></a><h2>What we're about</h2>
+
+	<p style="color:#484848">In March 2012, Stephen Wolfram wrote an earth-shattering blog post entitled <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/" target="_blank"><em>The Personal Analytics of My Life</em></a>. His post shares the insights of over a decade of personal data analysis, using his email, calendar, keystroke data and a pedometer.</p>
+
+	<p style="color:#484848">Wolfram demonstrates that <strong>data is powerful</strong>, if you know what to do with it. Data helps us predict the weather, build stock portfolios, and make the trains run on time. You could even say that data and data analysis tools allow us to perceive the world around us - light is just data interpreted by our eyes and brains.</p>
+	
+	<p style="color:#484848">Data can be world-changing, but we have <em>far more data</em> than we're able to effectively analyze. That's the main message we took from Wolfram's article: with better tools, we can <strong>turn data into insights</strong> in order to live better lives.</p>
+	
+	<p style="color:#484848">EmailCharts is just one step in that lifelong quest. Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal the patterns in your email data. At the end of the day, we have one simple goal: <strong>to help you understand how you work, so that you can improve how you live</strong>.</p>
+
+	</div><!-- End of one half -->
+
+<!-- Start of one half first -->
+<!-- End of one half first -->
+
+<!-- Start of one half -->
+<div class="one_half">
+<img src="img/browser_window_right.jpg" width="408" height="518" class="left" alt="product image smartphone" />
+
+</div>
+
+</section><!-- End of middle earth -->
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+<!-- Start of call to action -->
+<div class="call_to_action">
+
+<!-- Start of button group2 -->
+<section class="button_group2">
+
+<!-- Start of black button -->
+<div class="black_button">
+
+<!-- Start of left bracket -->
+<div class="left_bracket">
+
+</div><!-- End of left bracket -->
+
+<a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/" target="_blank">Learn More</a>
+
+</div><!-- End of black button -->
+
+<!-- Start of hex -->
+<div class="hex">
+<img src="img/or.png" width="31" height="38" alt="or" />
+
+</div><!-- End of hex -->
+
+<!-- Start of green button right -->
+<div class="green_button_right">
+
+<a href="#" onClick="doIt(); return false">Try It Now</a>
+
+<!-- Start of right bracket -->
+<div class="right_bracket">
+
+</div><!-- End of right bracket -->
+
+</div><!-- End of green button right -->
+
+</section><!-- End of button group2 -->
+
+</div><!-- End of call to action -->
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+<a id="learnmore3"></a>
+
+<!-- Start of main cta quote wrapper -->
+<section class="main_cta_quote_wrapper">
+<img src="img/mail-icon.png" height="56" width="47" alt="mail icon" />
+
+<!-- Start of main cta quote -->
+<div class="main_cta_quote">
+<h2><strong>This is just the beginning.</strong></h2>
+<p>Enter your contact information for updates on new features.</p>
+
+<form action="staytuned" id="contact_form" method="post" onsubmit="return validateForm();">
+
+<ul>				
+<li class="email">
+<label>Email Address<span class="required"></span></label>					
+<input type="text" name="email" id="email" value="Email Address" class="requiredField email" onblur="if(this.value == '') { this.value = 'Email Address'; }" onfocus="if(this.value == 'Email Address') { this.value = ''; }" /> 
+</li>
+
+<li class="button"><input id="submitted" class="input-submit" type="submit" value="Submit Info" name="submit" />
+</li>
+
+</ul>
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</form>
+
+</div><!-- End of main cta quote -->
+
+<hr />
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</section><!-- End of main cta quote wrapper -->
+
+</div><!-- End of main content wrapper -->
+
+<!-- Start of footer -->
+<footer id="bottom">
+
+<!-- Start of footer logo -->
+<div class="footer_logo">
+<a href="#"><img src="img/logo-small.png" height="35" width="165" alt="bottom logo"></a>
+
+<p><span class="copyright">&copy; Copyright <a href="">EmailCharts</a> 2012, All Rights Reserved.</span></p>
+
+</div><!-- End of footer logo -->
+
+<!-- Start of social -->
+<div class="social">
+<p><span class="copyright">The world must know.</span></p>
+
+<!-- Start of pinterest -->
+<div id="pinterest">
+<a href="http://pinterest.com/pin/create/button/?url=http://emailcharts.com/home?status=EmailCharts - Visualize Your Email&amp;media=&media=img/logo.png" title="Pin This!" rel="nofollow" target="_blank" alt="Pinterest"></a>
+
+</div><!-- End of pinterest -->
+
+<!-- Start of twitter -->
+<div id="twitter">
+	<a target="_blank" href="http://twitter.com/home?status=http://www.emailcharts.com/"></a>
+
+</div><!-- End of twitter -->
+
+<!-- Start of linkedin -->
+<div id="linkedin">
+<a target="_blank" href="	http://www.linkedin.com/shareArticle?mini=true&url=http://www.emailcharts.com/&title=Visualize Your Email With EmailCharts&summary=Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal your email sending patterns. At the end of the day, we have one simple goal: to help you understand how you work, so that you can improve how you live."></a>
+
+</div><!-- End of linkedin -->
+
+<!-- Start of google -->
+<div id="google">
+<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php www.emailcharts.com;?>"></a>	
+
+</div><!-- End of google -->
+
+<!-- Start of facebook -->
+<div id="facebook">
+	<a target="_blank" href="	http://www.facebook.com/sharer.php?u=http://www.emailcharts.com/&t=Email Charts - Visualize Your Email"></a>
+
+</div><!-- End of facebook -->
+
+</div><!-- End of social -->
+
+</footer><!-- End of footer bottom -->
+
+
+</body>
+</html>

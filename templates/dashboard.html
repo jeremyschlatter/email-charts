@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--[if IE 7 ]>    <html class= "ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class= "ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class= "ie9"> <![endif]-->
+
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+
+<head>
+
+<!--Page Title-->
+<title>EmailCharts</title>
+<!--Meta Tags-->
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- Set Viewport-->
+<meta name="viewport" content="user-scalable=no,initial-scale=1.0, maximum-scale=1.0 width=device-width" />
+<!-- Allows WebApp-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!--Main CSS-->
+<link rel="stylesheet" href="css/main.css" media="screen">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.elastislide.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.preloadcssimages.js"></script>
+
+<script type="text/javascript">
+function validateForm()
+{
+var x=document.forms["contact_form"]["fname"].value;
+if (x==null || x=="" || x=="First Name")
+  {
+  alert("Please enter your first name");
+  return false;
+  }
+var x=document.forms["contact_form"]["lname"].value;
+if (x==null || x=="" || x=="Last Name")
+  {
+  alert("Please enter your last name");
+  return false;
+  }
+var x=document.forms["contact_form"]["email"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Please supply a valid e-mail address");
+  return false;
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- Start header top -->
+<header id="top">
+
+<!-- Start of top logo -->
+<div id="top_logo">
+<a href="/"><img src="img/logo.jpg" alt="top logo" /></a>
+
+</div><!-- End of top logo -->
+
+<!-- Start of top cta -->
+<div id="top_cta">
+
+<!-- Start of pinterest -->
+
+<div id="pinterest">
+
+<a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://emailcharts.com/home?status=EmailCharts - Visualize Your Email&amp;media=&media=img/logo.png" title="Pin This!" rel="nofollow" target="_blank" alt="Pinterest"></a>
+</div><!-- End of pinterest -->
+
+<!-- Start of twitter -->
+<div id="twitter">
+<a target="_blank" href="http://twitter.com/home?status=http://www.emailcharts.com/"></a>
+
+</div><!-- End of twitter -->
+
+<!-- Start of linkedin -->
+<div id="linkedin">
+<a target="_blank" href="	http://www.linkedin.com/shareArticle?mini=true&url=http://www.emailcharts.com/&title=Visualize Your Email With EmailCharts&summary=Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal your email sending patterns. At the end of the day, we have one simple goal: to help you understand how you work, so that you can improve how you live."></a>
+
+</div><!-- End of linkedin -->
+
+<!-- Start of google -->
+<div id="google">
+<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php www.emailcharts.com;?>"></a>	
+
+</div><!-- End of google -->
+
+<!-- Start of facebook -->
+<div id="facebook">
+<a target="_blank" href="	http://www.facebook.com/sharer.php?u=http://www.emailcharts.com/&t=Email Charts - Visualize Your Email"></a>
+
+</div><!-- End of facebook -->
+
+</div><!-- End of top cta -->
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</header><!-- End of header top -->
+
+<!-- Start of full width border -->
+<div class="full_width_border">
+
+</div><!-- End of full width border -->
+
+<!-- Start of main content wrapper -->
+<div id="main_content_wrapper">
+	<div class="full_width_column_content">
+
+	<h1>Here's what we learned about your data:</h1>
+
+	        <!-- Start of one half first -->
+	        <div class="one_half_first">
+			<h2>Email Sending Times</h2>
+	        <p>This visualization helps you see when you've <em>sent</em> emails, from when you started using email through today. You may some interesting patterns - can you see white spots where you're sleeping, or darkened periods of higher activity?</p>
+    {{if .Analysis}}
+	<p>Our data analysis reveals that:</p>
+	<ul>
+        {{range .Analysis}}
+        <li>{{.}}</li>
+        {{end}}
+	</ul>
+    {{end}}
+
+	        </div><!-- End of one half first -->
+
+	        <!-- Start of one half -->
+	        <div class="one_half">
+
+            <img src="{{.GraphFile}}" \>
+
+	        </div><!-- End of one half -->
+
+
+
+	        <!-- Start of one half first -->
+	        <div class="one_half_first">
+                <img src="{{.DayGraph}}" \>
+	        </div><!-- End of one half first -->
+
+	        <!-- Start of one half -->
+	        <div class="one_half">
+                <img src="{{.BarGraph}}" \>
+	        </div><!-- End of one half -->
+
+
+	</div>
+
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+<!-- Start of main cta quote wrapper -->
+<section class="main_cta_quote_wrapper">
+<img src="img/mail-icon.png" height="56" width="47" alt="mail icon" />
+
+<!-- Start of main cta quote -->
+<div class="main_cta_quote">
+<h2><strong>Like what you see?</strong> More visualizations are coming soon!</h2>
+<p>Enter your contact info so we can let you know about new features and updates.</p>
+<form action="staytuned" id="contact_form" method="post" onsubmit="return validateForm();">
+
+<ul>				
+
+<li class="email">
+<label>Email Address<span class="required"></span></label>					
+<input type="text" name="email" id="email" value="Email Address" class="requiredField email" onblur="if(this.value == '') { this.value = 'Email Address'; }" onfocus="if(this.value == 'Email Address') { this.value = ''; }" /> 
+</li>
+
+<li class="button"><input id="submitted" class="input-submit" type="submit" value="Submit Info" name="submit" />
+</li>
+
+</ul>
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</form>
+
+
+</div><!-- End of main cta quote -->
+
+<hr />
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</section><!-- End of main cta quote wrapper -->
+
+</div><!-- End of main content wrapper -->
+
+<!-- Start of footer -->
+<footer id="bottom">
+
+<!-- Start of footer logo -->
+<div class="footer_logo">
+<a href="#"><img src="img/logo-small.png" height="35" width="165" alt="bottom logo"></a>
+
+<p><span class="copyright">&copy; Copyright <a href="">EmailCharts</a> 2012, All Rights Reserved.</span></p>
+
+</div><!-- End of footer logo -->
+
+<!-- Start of social -->
+<div class="social">
+<p><span class="copyright">The world must know.</span></p>
+
+<!-- Start of pinterest -->
+<div id="pinterest">
+<a href="http://pinterest.com/pin/create/button/?url=http://emailcharts.com/home?status=EmailCharts - Visualize Your Email&amp;media=&media=img/logo.png" title="Pin This!" rel="nofollow" target="_blank" alt="Pinterest"></a>
+
+</div><!-- End of pinterest -->
+
+<!-- Start of twitter -->
+<div id="twitter">
+	<a target="_blank" href="http://twitter.com/home?status=http://www.emailcharts.com/"></a>
+
+</div><!-- End of twitter -->
+
+<!-- Start of linkedin -->
+<div id="linkedin">
+<a target="_blank" href="	http://www.linkedin.com/shareArticle?mini=true&url=http://www.emailcharts.com/&title=Visualize Your Email With EmailCharts&summary=Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal your email sending patterns. At the end of the day, we have one simple goal: to help you understand how you work, so that you can improve how you live."></a>
+
+</div><!-- End of linkedin -->
+
+<!-- Start of google -->
+<div id="google">
+<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php www.emailcharts.com;?>"></a>	
+
+</div><!-- End of google -->
+
+<!-- Start of facebook -->
+<div id="facebook">
+	<a target="_blank" href="	http://www.facebook.com/sharer.php?u=http://www.emailcharts.com/&t=Email Charts - Visualize Your Email"></a>
+
+</div><!-- End of facebook -->
+
+</div><!-- End of social -->
+
+</footer><!-- End of footer bottom -->
+
+
+</body>
+</html>

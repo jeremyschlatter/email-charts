@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--[if IE 7 ]>    <html class= "ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class= "ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class= "ie9"> <![endif]-->
+
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+
+<head>
+
+<!--Page Title-->
+<title>EmailCharts</title>
+<!--Meta Tags-->
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- Set Viewport-->
+<meta name="viewport" content="user-scalable=no,initial-scale=1.0, maximum-scale=1.0 width=device-width" />
+<!-- Allows WebApp-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!--Main CSS-->
+<link rel="stylesheet" href="css/main.css" media="screen">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.elastislide.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script type="text/javascript"> function DoAuthInit() { gapi.auth.init(); } </script>
+<script src="https://apis.google.com/js/client.js?onload=DoAuthInit"></script>
+<script src="js/custom.js"></script>
+<script src="js/emailcharts.js"></script>
+<script src="js/jquery.preloadcssimages.js"></script>
+
+<script type="text/javascript">
+        $.post('visualize', { user: "{{.user}}", token: "{{.token}}" },
+                function(result) {
+                    redirectPOST('dashboard', { data: result });
+                });
+</script>
+
+</head>
+
+<body>
+
+<!-- Start header top -->
+<header id="top">
+
+<!-- Start of top logo -->
+<div id="top_logo">
+<a href="/"><img src="img/logo.jpg" alt="top logo" /></a>
+
+</div><!-- End of top logo -->
+
+<!-- Start of top cta -->
+<div id="top_cta">
+
+<!-- Start of pinterest -->
+
+<div id="pinterest">
+
+<a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://emailcharts.com/home?status=EmailCharts - Visualize Your Email&amp;media=&media=img/logo.png" title="Pin This!" rel="nofollow" target="_blank" alt="Pinterest"></a>
+</div><!-- End of pinterest -->
+
+<!-- Start of twitter -->
+<div id="twitter">
+<a target="_blank" href="http://twitter.com/home?status=http://www.emailcharts.com/"></a>
+
+</div><!-- End of twitter -->
+
+<!-- Start of linkedin -->
+<div id="linkedin">
+<a target="_blank" href="	http://www.linkedin.com/shareArticle?mini=true&url=http://www.emailcharts.com/&title=Visualize Your Email With EmailCharts&summary=Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal your email sending patterns. At the end of the day, we have one simple goal: to help you understand how you work, so that you can improve how you live."></a>
+
+</div><!-- End of linkedin -->
+
+<!-- Start of google -->
+<div id="google">
+<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php www.emailcharts.com;?>"></a>	
+
+</div><!-- End of google -->
+
+<!-- Start of facebook -->
+<div id="facebook">
+<a target="_blank" href="	http://www.facebook.com/sharer.php?u=http://www.emailcharts.com/&t=Email Charts - Visualize Your Email"></a>
+
+</div><!-- End of facebook -->
+
+</div><!-- End of top cta -->
+
+<!-- Start of clear --><div class="clear"></div><!-- End of clear -->
+
+</header><!-- End of header top -->
+
+<!-- Start of full width border -->
+<div class="full_width_border">
+
+</div><!-- End of full width border -->
+
+<!-- Start of main content wrapper -->
+<div id="main_content_wrapper">
+    <section class="main_cta">
+    <h1>Loading your graphs!</h1>
+    <h3>(Now might be a good time to grab some coffee)</h3>
+    <img src="img/loading_wheel.gif" />
+    </section>
+</div><!-- End of main content wrapper -->
+
+<!-- Start of footer -->
+<footer id="bottom">
+
+<!-- Start of footer logo -->
+<div class="footer_logo">
+<a href="#"><img src="img/logo-small.png" height="35" width="165" alt="bottom logo"></a>
+
+<p><span class="copyright">&copy; Copyright <a href="">EmailCharts</a> 2012, All Rights Reserved.</span></p>
+
+</div><!-- End of footer logo -->
+
+<!-- Start of social -->
+<div class="social">
+<p><span class="copyright">The world must know.</span></p>
+
+<!-- Start of pinterest -->
+<div id="pinterest">
+<a href="http://pinterest.com/pin/create/button/?url=http://emailcharts.com/home?status=EmailCharts - Visualize Your Email&amp;media=&media=img/logo.png" title="Pin This!" rel="nofollow" target="_blank" alt="Pinterest"></a>
+
+</div><!-- End of pinterest -->
+
+<!-- Start of twitter -->
+<div id="twitter">
+	<a target="_blank" href="http://twitter.com/home?status=http://www.emailcharts.com/"></a>
+
+</div><!-- End of twitter -->
+
+<!-- Start of linkedin -->
+<div id="linkedin">
+<a target="_blank" href="	http://www.linkedin.com/shareArticle?mini=true&url=http://www.emailcharts.com/&title=Visualize Your Email With EmailCharts&summary=Connect your email account, and we'll help you understand your email behavior - creating simple visualizations that reveal your email sending patterns. At the end of the day, we have one simple goal: to help you understand how you work, so that you can improve how you live."></a>
+
+</div><!-- End of linkedin -->
+
+<!-- Start of google -->
+<div id="google">
+<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php www.emailcharts.com;?>"></a>	
+
+</div><!-- End of google -->
+
+<!-- Start of facebook -->
+<div id="facebook">
+	<a target="_blank" href="	http://www.facebook.com/sharer.php?u=http://www.emailcharts.com/&t=Email Charts - Visualize Your Email"></a>
+
+</div><!-- End of facebook -->
+
+</div><!-- End of social -->
+
+</footer><!-- End of footer bottom -->
+
+
+</body>
+</html>
