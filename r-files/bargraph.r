@@ -27,8 +27,8 @@ z <- ggplot(
 		legend.position = "none", 
 		axis.title.x = element_text(vjust=-.1),
 		plot.title = element_text(vjust=1, face="bold"),
-		axis.text.y = theme_blank(),
-		axis.ticks.y = theme_blank()) +
+		axis.text.y = element_blank(),
+		axis.ticks.y = element_blank()) +
 	xlab("Date") +
 	ylab("Quantity") +
 	coord_cartesian(
