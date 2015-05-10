@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/mail"
 
-	"code.google.com/p/go-imap/go1/imap"
+	"github.com/jeremyschlatter/email-charts/Godeps/_workspace/src/github.com/mxk/go-imap/imap"
 )
 
 type oauthSASL struct {

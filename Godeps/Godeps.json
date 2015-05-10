@@ -1,0 +1,17 @@
+{
+	"ImportPath": "github.com/jeremyschlatter/email-charts",
+	"GoVersion": "go1.4.1",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/dustin/go-humanize",
+			"Rev": "cb7b800be3f0238405be0e57d481740cfc4fb285"
+		},
+		{
+			"ImportPath": "github.com/mxk/go-imap/imap",
+			"Rev": "531c36c3f12d6a03ea766b07a77314aa51ec17f3"
+		}
+	]
+}

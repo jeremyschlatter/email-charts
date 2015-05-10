@@ -11,7 +11,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/dustin/go-humanize"
+	"github.com/jeremyschlatter/email-charts/Godeps/_workspace/src/github.com/dustin/go-humanize"
 )
 
 var epoch = time.Unix(0, 0)

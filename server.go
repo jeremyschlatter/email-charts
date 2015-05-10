@@ -14,7 +14,7 @@ import (
 	"syscall"
 	"time"
 
-	"email-charts/app"
+	"github.com/jeremyschlatter/email-charts/app"
 )
 
 var err error
@@ -94,7 +94,7 @@ func TrapKillSignals() {
 	signal.Notify(c, syscall.SIGTERM)
 	signal.Notify(c, syscall.SIGKILL)
 	go func() {
-		for _ = range c {
+		for range c {
 			log.Println("Caught a fatal signal. Terminating.")
 			app.CallExitFuncs()
 			os.Exit(1)
@@ -155,6 +155,11 @@ func main() {
 		return
 	}
 	http.HandleFunc("/staytuned", signupHandler)
+	ok := func(w http.ResponseWriter, _ *http.Request) {
+		w.Write([]byte("ok"))
+	}
+	http.HandleFunc("/_ah/start", ok)
+	http.HandleFunc("/_ah/health", ok)
 
 	log.Printf(http.ListenAndServe(*httpAddr, Log(http.DefaultServeMux)).Error())
 }
