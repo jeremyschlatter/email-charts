@@ -19,7 +19,7 @@ function handleAuthResult(authResult) {
 }
 
 function authorize(immediate, callback) {
-    gapi.auth.authorize({client_id: '626667016449-micg4r3rg6t5b4014g7er7pkaur4kbpq.apps.googleusercontent.com',
+    gapi.auth.authorize({client_id: '582390535564-1iinodq9ttbrgb47e3pchsgdbf25hcis.apps.googleusercontent.com',
                          scope: 'https://mail.google.com/ https://www.googleapis.com/auth/userinfo.email',
                          immediate: immediate},
                         callback);
