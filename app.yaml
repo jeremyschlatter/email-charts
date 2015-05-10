@@ -1,0 +1,10 @@
+application: email-charts
+runtime: custom
+api_version: go1
+vm: true
+
+resources:
+  memory_gb: .5
+
+automatic_scaling:
+  min_num_instances: 1
